@@ -6,7 +6,7 @@
 :root {
     --background_color: #313338;
     --accent_color: #f6ebd9;
-    --message_background: #313338;
+    --message_background: #2b2d31;
     --username_color: #f2f3f5;
     --datetime_color: #949ba4;
     --message_color: #dbdee1;
@@ -24,11 +24,14 @@ html, body {
  * Message container
  */
 .message-container {
+    background-color: var(--message_background);
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     margin: auto;
-    padding-top: 30vh;
-    width: 80%;
+    padding: 40px;
+    margin-top: 30vh;
+    max-width: 80%;
 }
 
 /**
