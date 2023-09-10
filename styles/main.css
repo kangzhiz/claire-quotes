@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+/**
+ * Color pallete
+ */
+:root {
+    --background_color: #313338;
+    --accent_color: #f6ebd9;
+    --message_background: #313338;
+    --username_color: #f2f3f5;
+    --datetime_color: #949ba4;
+    --message_color: #dbdee1;
+}
+
+html, body {
+    background-color: var(--background_color);
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+/**
+ * Message container
+ */
+.message-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 30vh;
+    width: 80%;
+}
+
+/**
+ * Image container
+ */
+.img-container {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.img-container img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+/**
+ * Quote container
+ */
+.quote-container {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+.quote-container .username-datetime-container {
+    padding-bottom: 10px;
+}
+
+.quote-container .username-datetime-container .username {
+    color: var(--username_color);
+    font-weight: 500;
+}
+
+.quote-container .username-datetime-container .datetime {
+    color: var(--datetime_color);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.quote-container .quote-text {
+    color: var(--message_color);
+    font-weight: 300;
+    line-height: 40px;
+}
+
+/**
+ * New quote button
+ */
+.new-quote-button {
+    bottom: 10vh;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.new-quote-button button {
+    background-color: var(--accent_color);
+    border: 0;
+    color: var(--background_color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 50px;
+    opacity: 0.8;
+    width: 100%;
+}
+
+.new-quote-button button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/**
+ * Mobile view
+ */
+@media only screen and (max-width: 876px) {
+    /**
+     * Image container
+     */
+    .img-container {
+        padding-right: 10px;
+    }
+
+    .img-container img {
+        height: 40px;
+        width: 40px;
+    }
+
+    /**
+     * Quote container
+     */
+    .quote-container {
+        font-size: 1rem;
+    }
+
+    .quote-container .username-datetime-container {
+        padding-bottom: 3px;
+    }
+
+    .quote-container .username-datetime-container .username {
+        font-weight: 400;
+    }
+
+    .quote-container .username-datetime-container .datetime {
+        font-size: 0.8rem;
+    }
+
+    .quote-container .quote-text {
+        font-size: 0.9rem;
+        line-height: 20px;
+    }
+
+    /**
+     * New quote button
+     */
+    .new-quote-button {
+        bottom: 0px;
+        height: 10%;
+    }
+
+    .new-quote-button button {
+        opacity: 1;
+        height: 100%;
+    }
+}
